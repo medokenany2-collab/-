@@ -1,0 +1,6 @@
+# Kenany Perfumes - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://kenanyperfumes.com/sitemap.xml
