@@ -5,7 +5,7 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <!-- Homepage -->
   <url>
-    <loc>https://kenanyperfumes.com/</loc>
+    <loc>https://alkinaniperfumes.vercel.app/</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -13,7 +13,7 @@
 
   <!-- Fragrance Oils Catalog (زيوت العطور للتركيبات) -->
   <url>
-    <loc>https://kenanyperfumes.com/#fragrance-oils</loc>
+    <loc>https://alkinaniperfumes.vercel.app/</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
@@ -21,7 +21,7 @@
 
   <!-- Bottles & Sizes Section (قسم الزجاجات والمقاسات) -->
   <url>
-    <loc>https://kenanyperfumes.com/#bottles-sizes</loc>
+    <loc>https://alkinaniperfumes.vercel.app/</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -29,7 +29,7 @@
 
   <!-- Special Request / Imported Perfumes (العطور المستوردة حسب الطلب) -->
   <url>
-    <loc>https://kenanyperfumes.com/#special-request</loc>
+    <loc>https://alkinaniperfumes.vercel.app/</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -37,7 +37,7 @@
 
   <!-- FAQ Section (الأسئلة الشائعة) -->
   <url>
-    <loc>https://kenanyperfumes.com/#faq</loc>
+    <loc>https://alkinaniperfumes.vercel.app/</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -45,7 +45,7 @@
 
   <!-- Contact & Location (التواصل والطلب) -->
   <url>
-    <loc>https://kenanyperfumes.com/#contact</loc>
+    <loc>https://alkinaniperfumes.vercel.app/</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
