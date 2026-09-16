@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap Location
-Sitemap: https://kenanyperfumes.com/sitemap.xml
+Sitemap: https://alkinaniperfumes.vercel.app/sitemap.xml
