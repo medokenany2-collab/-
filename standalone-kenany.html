@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kenany | دار كنانى للعطور الفاخرة والزيوت النقية</title>
+  <meta name="description" content="كنانى للعطور الفاخرة - زيوت عطرية فرنسية وشرقية نقية للتركيبات وزجاجات مميزة وعطور مستوردة حسب الطلب." />
+
+  <!-- Google Fonts: Cairo, Cinzel & Cormorant Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Cinzel:wght@500;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Pure Custom CSS (Deep Black & Rich Gold Luxury Palette) -->
+  <style>
+    :root {
+      --bg-dark: #070709;
+      --card-dark: #101017;
+      --card-hover: #151520;
+      --gold-primary: #d4af37;
+      --gold-light: #f5e7a9;
+      --gold-dark: #997a15;
+      --gold-border: rgba(212, 175, 55, 0.25);
+      --text-main: #f0f0f5;
+      --text-muted: #a5a5b5;
+      --whatsapp-green: #25d366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Cairo', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Custom Selection & Scrollbar */
+    ::selection {
+      background: var(--gold-primary);
+      color: #000;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #09090d;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2a2618;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--gold-primary);
+    }
+
+    /* Typography & Utilities */
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #fff3c4 0%, #d4af37 50%, #aa8214 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Navigation Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(8, 8, 12, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--gold-border);
+      padding: 12px 0;
+      transition: all 0.3s ease;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .emblem {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--gold-primary);
+      background: radial-gradient(circle, #2a2414, #0d0c07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      font-family: 'Cinzel', serif;
+      font-size: 22px;
+      font-weight: 800;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    }
+
+    .brand-text h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      letter-spacing: 2px;
+      color: var(--gold-light);
+      line-height: 1.1;
+    }
+    .brand-text span {
+      font-size: 11px;
+      color: var(--gold-primary);
+      font-weight: 600;
+      display: block;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #d0d0dc;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: var(--gold-primary);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-phone {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-family: monospace;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--gold-border);
+      background: #111118;
+      transition: all 0.2s;
+    }
+    .btn-phone:hover {
+      border-color: var(--gold-primary);
+      color: #fff;
+    }
+
+    .btn-whatsapp-header {
+      background: linear-gradient(135deg, #d4af37, #997a15);
+      color: #050508;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: filter 0.2s;
+    }
+    .btn-whatsapp-header:hover {
+      filter: brightness(1.15);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 150px 0 90px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 30px;
+      background: rgba(20, 20, 30, 0.9);
+      border: 1px solid var(--gold-border);
+      color: var(--gold-light);
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: 54px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero-tagline {
+      max-width: 720px;
+      margin: 0 auto 36px;
+      font-size: 17px;
+      color: #b5b5c5;
+      line-height: 1.8;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ecd57c 0%, #d4af37 50%, #aa8214 100%);
+      color: #09090c;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 15px;
+      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-primary:hover {
+      filter: brightness(1.1);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: #14141c;
+      color: var(--gold-light);
+      border: 1px solid var(--gold-border);
+      font-weight: 600;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover {
+      border-color: var(--gold-primary);
+      background: #1c1c28;
+    }
+
+    /* Section Title Standard */
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+    .section-badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 20px;
+      background: #14141e;
+      border: 1px solid var(--gold-border);
+      color: var(--gold-light);
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 34px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .section-title-sub {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 4px;
+    }
+    .section-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* Section 2: Bottles & Sizes Section */
+    .section-bottles {
+      padding: 80px 0;
+      background: #0a0a0f;
+      border-top: 1px solid var(--gold-border);
+    }
+
+    .bottles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+
+    .bottle-card {
+      background: var(--card-dark);
+      border: 1px solid var(--gold-border);
+      border-radius: 18px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.3s;
+    }
+    .bottle-card:hover {
+      border-color: var(--gold-primary);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.12);
+    }
+    .bottle-card.highlight {
+      border: 2px solid var(--gold-primary);
+      background: linear-gradient(180deg, #181824 0%, #0e0e16 100%);
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+    }
+
+    .bottle-tag {
+      position: absolute;
+      top: -12px;
+      right: 24px;
+      background: linear-gradient(135deg, #d4af37, #aa8214);
+      color: #000;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 12px;
+      border-radius: 20px;
+    }
+
+    .bottle-visual {
+      height: 170px;
+      background: #08080c;
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .flacon-draw {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .flacon-nozzle {
+      width: 14px;
+      height: 10px;
+      background: linear-gradient(to right, #d4af37, #f5e7a9);
+      border-radius: 2px 2px 0 0;
+    }
+    .flacon-cap {
+      background: linear-gradient(to right, #332d16, #d4af37, #332d16);
+      border-radius: 2px;
+      margin-bottom: 2px;
+    }
+    .flacon-body {
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(212,175,55,0.15) 100%);
+      border-radius: 0 0 10px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bottle-capacity-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.8);
+      border: 1px solid var(--gold-border);
+      color: var(--gold-light);
+      font-family: monospace;
+      font-weight: bold;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    .bottle-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+    .bottle-title-en {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      color: #9595a5;
+      margin-bottom: 12px;
+    }
+    .bottle-desc {
+      font-size: 13px;
+      color: #b0b0c0;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .bottle-features {
+      list-style: none;
+      margin-bottom: 20px;
+      font-size: 12px;
+      color: #d0d0e0;
+    }
+    .bottle-features li {
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .bottle-features li::before {
+      content: "✓";
+      color: var(--gold-primary);
+      font-weight: bold;
+    }
+
+    /* Section 3: Premium Fragrance Oils Grid */
+    .section-oils {
+      padding: 90px 0;
+      background: var(--bg-dark);
+      border-top: 1px solid var(--gold-border);
+    }
+
+    .search-filter-box {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .search-bar {
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 12px;
+      background: #111118;
+      border: 1px solid var(--gold-border);
+      color: #fff;
+      font-family: 'Cairo', sans-serif;
+      font-size: 15px;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .search-bar:focus {
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    }
+
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+    .tab-btn {
+      background: #14141d;
+      border: 1px solid var(--gold-border);
+      color: #c0c0d0;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      background: var(--gold-primary);
+      color: #000;
+      border-color: var(--gold-primary);
+    }
+
+    .oils-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    /* Fragrance Product Card */
+    .fragrance-card {
+      background: var(--card-dark);
+      border: 1px solid var(--gold-border);
+      border-radius: 16px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .fragrance-card:hover {
+      border-color: var(--gold-primary);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.12);
+    }
+
+    .fragrance-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .brand-badge {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      color: var(--gold-light);
+      background: #1b1b26;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+    .gender-badge {
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .gender-men { background: rgba(59, 130, 246, 0.15); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.3); }
+    .gender-women { background: rgba(236, 72, 153, 0.15); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.3); }
+    .gender-unisex { background: rgba(212, 175, 55, 0.15); color: #ffd875; border: 1px solid rgba(212, 175, 55, 0.3); }
+
+    .fragrance-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+    .fragrance-title-en {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      color: #9999a8;
+      margin-bottom: 10px;
+    }
+
+    .fragrance-family {
+      display: inline-block;
+      font-size: 11px;
+      color: var(--gold-primary);
+      background: #0a0a0f;
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      margin-bottom: 12px;
+    }
+
+    .fragrance-desc {
+      font-size: 12px;
+      color: #b5b5c5;
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    /* Olfactory Pyramid Box */
+    .notes-box {
+      background: #0a0a0e;
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 16px;
+      font-size: 11.5px;
+    }
+    .note-row {
+      display: flex;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    .note-row:last-child {
+      margin-bottom: 0;
+    }
+    .note-label {
+      width: 70px;
+      flex-shrink: 0;
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+    .note-value {
+      color: #e0e0ec;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+      border-top: 1px solid rgba(212, 175, 55, 0.15);
+      padding-top: 14px;
+    }
+
+    .btn-order-oil {
+      flex: 1;
+      background: linear-gradient(135deg, #d4af37, #997a15);
+      color: #000;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 12.5px;
+      text-align: center;
+      transition: filter 0.2s;
+    }
+    .btn-order-oil:hover {
+      filter: brightness(1.15);
+    }
+
+    /* Section 4: Special Request Card (Inside Fragrance Section) */
+    .special-request-card {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, #18150c 0%, #241e10 50%, #15130b 100%);
+      border: 2px solid var(--gold-primary);
+      border-radius: 20px;
+      padding: 36px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+      margin: 10px 0 25px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .special-badge {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.2);
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    .special-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .special-subtitle {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      color: var(--gold-light);
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .special-desc {
+      font-size: 14px;
+      color: #dcd7c5;
+      max-width: 650px;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .special-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .feature-pill {
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      color: #f5f0dc;
+    }
+
+    .special-cta-box {
+      background: rgba(12, 10, 6, 0.9);
+      border: 1px solid var(--gold-border);
+      border-radius: 16px;
+      padding: 22px;
+      text-align: center;
+      min-width: 280px;
+    }
+    .special-cta-box h4 {
+      font-size: 15px;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .special-cta-box p {
+      font-size: 12px;
+      color: #a8a08c;
+      margin-bottom: 14px;
+    }
+
+    /* Section 5: Footer & Contact Section */
+    footer {
+      background: #040406;
+      border-top: 2px solid var(--gold-border);
+      padding: 70px 0 35px;
+      color: #d5d5e5;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-col h4 {
+      color: var(--gold-light);
+      font-size: 15px;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    .footer-col p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .footer-col ul {
+      list-style: none;
+      font-size: 13px;
+      color: #b0b0c0;
+    }
+    .footer-col ul li {
+      margin-bottom: 8px;
+    }
+    .footer-col ul a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col ul a:hover {
+      color: var(--gold-primary);
+    }
+
+    .phone-highlight {
+      background: #0d0d14;
+      border: 1px solid var(--gold-border);
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-bottom: 12px;
+    }
+    .phone-highlight span {
+      font-size: 11px;
+      color: #888899;
+      display: block;
+    }
+    .phone-highlight a {
+      font-family: monospace;
+      font-size: 18px;
+      color: var(--gold-light);
+      text-decoration: none;
+      font-weight: bold;
+      direction: ltr;
+      display: inline-block;
+    }
+
+    .btn-footer-whatsapp {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 13px;
+      transition: filter 0.2s;
+    }
+    .btn-footer-whatsapp:hover {
+      filter: brightness(1.15);
+    }
+
+    /* Professional Closing Statement Banner */
+    .closing-banner {
+      background: linear-gradient(135deg, #14141e, #1a1710, #14141e);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 18px;
+      padding: 30px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+    .closing-banner h3 {
+      font-size: 19px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .closing-banner p {
+      font-size: 14px;
+      color: #ded8c5;
+      line-height: 1.8;
+    }
+    .closing-banner-en {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      color: #988e74;
+      letter-spacing: 1px;
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(212, 175, 55, 0.15);
+      padding-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #888899;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      width: 58px;
+      height: 58px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      z-index: 9999;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
+    }
+    .floating-whatsapp svg {
+      width: 32px;
+      height: 32px;
+      fill: #fff;
+    }
+
+    /* Modal for Notes */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(5px);
+      z-index: 10000;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal-content {
+      background: #111118;
+      border: 2px solid var(--gold-primary);
+      border-radius: 18px;
+      width: 100%;
+      max-width: 520px;
+      padding: 28px;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .btn-modal-close {
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      background: #1a1a24;
+      border: none;
+      color: #999;
+      font-size: 18px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 768px) {
+      .hero-title { font-size: 38px; }
+      .hero-subtitle { font-size: 24px; }
+      nav { display: none; }
+      .special-request-card { padding: 22px; }
+      .special-title { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Header & Hero Section -->
+  <header>
+    <div class="container nav-inner">
+      <a href="#" class="brand-logo">
+        <div class="emblem">K</div>
+        <div class="brand-text">
+          <h1>KENANY</h1>
+          <span>كنانى للعطور الفاخرة</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="#bottles">قسم الزجاجات ومقاساتها</a></li>
+          <li><a href="#fragrance-oils">زيوت العطور للتركيبات</a></li>
+          <li><a href="#special-request">عطور مستوردة بالطلب</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:01018390782" class="btn-phone">01018390782</a>
+        <a href="https://wa.me/201018390782?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%86%D8%A7%D9%86%D9%89%20%D9%84%D9%84%D8%B9%D8%B7%D9%88%D8%B1%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%81%D8%B5%D9%8A%D9%84%20%D8%B9%D8%B7%D8%B1%20%D8%AE%D8%A7%D8%B5." target="_blank" class="btn-whatsapp-header">
+          <span>واتساب كنانى</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-badge">✨ دار كنانى للعطور الفاخرة • Haute Parfumerie & Custom Blends</div>
+      <h1 class="hero-title">KENANY</h1>
+      <h2 class="hero-subtitle text-gold-gradient">عالم الفخامة العطرية والزيوت النقية</h2>
+      <p class="hero-tagline">
+        نصنع بصمتك العطرية الخاصة بأعلى درجات التركيز مع تشكيلة واسعة من أفخر الزجاجات وعطور مستوردة أصلية نوفرها خصيصاً حسب طلبك.
+      </p>
+      <div class="hero-ctas">
+        <a href="#fragrance-oils" class="btn-primary">تصفح زيوت العطور (55+ عطر)</a>
+        <a href="#bottles" class="btn-secondary">قسم الزجاجات ومقاساتها</a>
+        <a href="https://wa.me/201018390782?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%86%D8%A7%D9%86%D9%89%20%D9%84%D9%84%D8%B9%D8%B7%D9%88%D8%B1%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%B9%D8%B7%D8%B1%D9%8A%D8%A9." target="_blank" class="btn-secondary" style="border-color: #25d366; color: #25d366;">استشارة واتساب مباشرة</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Bottles & Sizes Section (قسم الزجاجات ومقاساتها) -->
+  <section class="section-bottles" id="bottles">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">فخامة التقديم والتعبئة</span>
+        <h2 class="section-title">قسم الزجاجات ومقاساتها</h2>
+        <span class="section-title-sub text-gold-gradient">Artisanal Flacons & Capacities</span>
+        <p class="section-desc">
+          اختر الزجاجة المثالية لعطرك من بين تشكيلتنا الفاخرة المتاحة للتعبئة الخاصة بسعات مختلفة (30 مل، 50 مل، 100 مل) ببخاخات فرنسية متطورة.
+        </p>
+      </div>
+
+      <div class="bottles-grid">
+        <!-- 30ml Bottle Card -->
+        <div class="bottle-card">
+          <span class="bottle-tag">المقاس العملي والتنقل</span>
+          <div class="bottle-visual">
+            <div class="bottle-capacity-badge">30 ML</div>
+            <div class="flacon-draw">
+              <div class="flacon-nozzle"></div>
+              <div class="flacon-cap" style="width: 32px; height: 26px;"></div>
+              <div class="flacon-body" style="width: 60px; height: 75px;">
+                <span style="font-size: 9px; font-family: 'Cinzel'; color: #f5e7a9;">KENANY</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="bottle-title">زجاجة كنانى برستيج 30 مل</h3>
+            <p class="bottle-title-en">Kenany Noir Pocket Flacon (30ml)</p>
+            <p class="bottle-desc">زجاجة كريستالية متينة بتصميم انسيابي عملي، صُممت خصيصاً لترافقك في جيبك وحقيبتك طوال اليوم دون أن تشغل حيزاً.</p>
+            <ul class="bottle-features">
+              <li>مضخة مايكرو سبري برذاذ فائق النعومة</li>
+              <li>زجاج كريستالي مقوى عالي النقاء ضد الكسر</li>
+              <li>مناسبة للمكتب والسفر وتجربة التركيبات</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/201018390782?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%86%D8%A7%D9%86%D9%89%20%D9%84%D9%84%D8%B9%D8%B7%D9%88%D8%B1%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B2%D8%AC%D8%A7%D8%AC%D8%A9%2030%20%D9%85%D9%84%20%D9%85%D8%B9%20%D8%B2%D9%8A%D8%AA%20%D8%B9%D8%B7%D8%B1%D9%8A." target="_blank" class="btn-order-oil">طلب زجاجة 30 مل مع عطرك</a>
+        </div>
+
+        <!-- 50ml Bottle Card (Highlight) -->
+        <div class="bottle-card highlight">
+          <span class="bottle-tag">الأكثر طلباً وتوازناً ⭐</span>
+          <div class="bottle-visual">
+            <div class="bottle-capacity-badge">50 ML</div>
+            <div class="flacon-draw">
+              <div class="flacon-nozzle"></div>
+              <div class="flacon-cap" style="width: 40px; height: 32px;"></div>
+              <div class="flacon-body" style="width: 80px; height: 95px;">
+                <span style="font-size: 11px; font-family: 'Cinzel'; color: #f5e7a9; font-weight: bold;">KENANY</span>
+                <span style="font-size: 8px; color: #fff;">50 ML</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="bottle-title">زجاجة كنانى الملكية 50 مل</h3>
+            <p class="bottle-title-en">Kenany Royal Signature Flacon (50ml)</p>
+            <p class="bottle-desc">المقاس الذهبي والأكثر طلباً. قاعدة زجاجية ثقيلة وفخمة، غطاء معدني ذهبي مصقول بوزن راقٍ وتصميم يعكس الهيبة والوقار.</p>
+            <ul class="bottle-features">
+              <li>قاعدة زجاجية سميكة ومصقولة بصرياً</li>
+              <li>غطاء معدني ذهبي فاخر مختوم</li>
+              <li>مضخة مخملية واسعة الزاوية تضاعف الفوحان</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/201018390782?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%86%D8%A7%D9%86%D9%89%20%D9%84%D9%84%D8%B9%D8%B7%D9%88%D8%B1%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B2%D8%AC%D8%A7%D8%AC%D8%A9%2050%20%D9%85%D9%84%20%D8%A7%D9%84%D9%85%D9%84%D9%83%D9%8A%D8%A9%20%D9%85%D8%B9%20%D8%B2%D9%8A%D8%AA%20%D8%B9%D8%B7%D8%B1%D9%8A." target="_blank" class="btn-primary" style="text-align:center; padding: 10px; font-size: 13px;">طلب زجاجة 50 مل مع عطرك</a>
+        </div>
+
+        <!-- 100ml Bottle Card -->
+        <div class="bottle-card">
+          <span class="bottle-tag">قمة الفخامة والاستدامة</span>
+          <div class="bottle-visual">
+            <div class="bottle-capacity-badge">100 ML</div>
+            <div class="flacon-draw">
+              <div class="flacon-nozzle"></div>
+              <div class="flacon-cap" style="width: 48px; height: 38px;"></div>
+              <div class="flacon-body" style="width: 95px; height: 110px;">
+                <span style="font-size: 13px; font-family: 'Cinzel'; color: #f5e7a9; font-weight: bold;">KENANY</span>
+                <span style="font-size: 9px; color: #fff;">100 ML</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="bottle-title">زجاجة كنانى إمبيريال 100 مل</h3>
+            <p class="bottle-title-en">Kenany Imperial Masterpiece (100ml)</p>
+            <p class="bottle-desc">التحفة الكبرى لعشاق الفخامة واستخدام العطر بسخاء. زجاج إكسترا فلنت شديد السماكة يزين طاولتك الخاصة بهيبة ملكية.</p>
+            <ul class="bottle-features">
+              <li>قاعدة شديدة السماكة توحي بالثبات والأناقة</li>
+              <li>إحكام غلق هيرميتيك يمنع تبخر الزيوت تماماً</li>
+              <li>رشاش فرنسي ضبابي بانتشار سحابي كثيف</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/201018390782?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%86%D8%A7%D9%86%D9%89%20%D9%84%D9%84%D8%B9%D8%B7%D9%88%D8%B1%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B2%D8%AC%D8%A7%D8%AC%D8%A9%20100%20%D9%85%D9%84%20%D8%A5%D9%85%D8%A8%D9%8A%D8%B1%D9%8A%D8%A7%D9%84%20%D9%85%D8%B9%20%D8%B2%D9%8A%D8%AA%20%D8%B9%D8%B7%D8%B1%D9%8A." target="_blank" class="btn-order-oil">طلب زجاجة 100 مل مع عطرك</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Premium Fragrance Oils Section (قسم زيوت العطر للتركيبات) -->
+  <section class="section-oils" id="fragrance-oils">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-badge">نقاء فرنسي وسويسري 100%</span>
+        <h2 class="section-title">قسم زيوت العطر للتركيبات</h2>
+        <span class="section-title-sub text-gold-gradient">Premium Pure Fragrance Oils</span>
+        <p class="section-desc">
+          أقوى وأشهر زيوت العطور العالمية والنيش بتركيز نقي فائق الثبات، مفصلة بالنوتات الهرمية (الافتتاحية، القلب، والقاعدة) لتختار عطرك باحترافية.
+        </p>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="search-filter-box">
+        <input type="text" id="oilSearchInput" class="search-bar" placeholder="ابحث باسم العطر (سوفاج، خمرة، أفنتوس...) أو المكون (فانيليا، عود، قهوة، لافندر)..." oninput="filterFragrances()" />
+        
+        <div class="filter-tabs">
+          <button class="tab-btn active" onclick="setFilter('all', this)">جميع العطور (55)</button>
+          <button class="tab-btn" onclick="setFilter('men', this)">رجالي</button>
+          <button class="tab-btn" onclick="setFilter('women', this)">حريمي</button>
+          <button class="tab-btn" onclick="setFilter('unisex', this)">للجنسين</button>
+          <button class="tab-btn" onclick="setFilter('niche', this)">نيش وملكي فاخر ✨</button>
+          <button class="tab-btn" onclick="setFilter('oud', this)">عود وشرقي أصيل</button>
+          <button class="tab-btn" onclick="setFilter('gourmand', this)">غورماند وسويت ☕</button>
+        </div>
+      </div>
+
+      <!-- Oils Grid (Includes Section 4: Special Request Card inside) -->
+      <div class="oils-grid" id="oilsGridContainer">
+
+        <!-- 4. Special Request Card (Inside the grid) -->
+        <div class="special-request-card" id="special-request">
+          <div>
+            <span class="special-badge">خدمة الاستيراد الحصري • Bespoke Sourcing</span>
+            <h3 class="special-title">يوجد عطور مستوردة أصلية حسب الطلب</h3>
+            <p class="special-subtitle">Imported Designer & Niche Perfumes Available Upon Request</p>
+            <p class="special-desc">
+              هل تبحث عن عطر أصلي مستورد أو إصدار نيش حصري من أشهر الدور الفرنسية والإيطالية؟ في <strong>كنانى</strong> نوفر لك أي عطر أصلي بعبوته الأصلية والمغلقة مع ضمان الأصالة 100% وبأفضل الأسعار.
+            </p>
+            <div class="special-features">
+              <span class="feature-pill">🛡️ أصلي 100% مع الباتش كود</span>
+              <span class="feature-pill">🌍 استيراد مباشر من أوروبا ودبي</span>
+              <span class="feature-pill">📦 متوفر جميع إصدارات النيش والديزاينر</span>
+            </div>
+          </div>
+
+          <div class="special-cta-box">
+            <h4>أرسل اسم العطر أو صورته</h4>
+            <p>سيتم الرد فوراً بالسعر الدقيق وموعد الاستلام</p>
+            <a href="https://wa.me/201018390782?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%86%D8%A7%D9%86%D9%89%20%D9%84%D9%84%D8%B9%D8%B7%D9%88%D8%B1%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D9%8A%D8%B1%20%D8%B9%D8%B7%D8%B1%20%D9%85%D8%B3%D8%AA%D9%88%D8%B1%D8%AF%20%D8%A3%D8%B5%D9%84%D9%8A%20%D8%A8%D8%A7%D9%84%D8%B7%D9%84%D8%A8%20%D8%AE%D8%A7%D8%B5%20%D8%A8%D9%8A." target="_blank" class="btn-primary" style="display:block; text-align:center; padding:12px;">
+              طلب عطر مستورد عبر واتساب
+            </a>
+          </div>
+        </div>
+
+        <!-- Fragrance cards will be dynamically injected here via Vanilla JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. Footer & Contact Section -->
+  <footer id="contact">
+    <div class="container">
+      
+      <!-- Footer Columns -->
+      <div class="footer-grid">
+        
+        <!-- Col 1 -->
+        <div class="footer-col">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+            <div class="emblem" style="width:36px; height:36px; font-size:18px;">K</div>
+            <div>
+              <h3 style="font-family:'Cinzel'; color:var(--gold-light); font-size:18px;">KENANY</h3>
+              <span style="font-size:11px; color:var(--gold-primary);">دار كنانى للعطور</span>
+            </div>
+          </div>
+          <p>
+            متخصصون في أرقى الزيوت العطرية النقية الفرنسية والشرقية، تركيب العطور الخاصة في زجاجات فاخرة، وتوفير العطور المستوردة الأصلية بالطلب.
+          </p>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="footer-col">
+          <h4>أقسام المتجر</h4>
+          <ul>
+            <li><a href="#hero">الرئيسية</a></li>
+            <li><a href="#bottles">قسم الزجاجات ومقاساتها (30ml / 50ml / 100ml)</a></li>
+            <li><a href="#fragrance-oils">زيوت العطور للتركيبات (55+ عطر)</a></li>
+            <li><a href="#special-request">عطور مستوردة أصلية حسب الطلب</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="footer-col">
+          <h4>ضمانات كنانى</h4>
+          <ul>
+            <li>✓ نقاء وثبات زيتي فائق التركيز</li>
+            <li>✓ كحول فرنسي نقي معالج وآمن</li>
+            <li>✓ زجاجات كريستال وبخاخات متطورة</li>
+            <li>✓ شحن سريع لكافة أنحاء جمهورية مصر</li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact info -->
+        <div class="footer-col">
+          <h4>معلومات التواصل والطلب</h4>
+          
+          <div class="phone-highlight">
+            <span>رقم الهاتف المباشر:</span>
+            <a href="tel:01018390782" id="footer-phone">01018390782</a>
+          </div>
+
+          <a href="https://wa.me/201018390782?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%86%D8%A7%D9%86%D9%89%20%D9%84%D9%84%D8%B9%D8%B7%D9%88%D8%B1%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%D9%83%D9%85%20%D9%84%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B7%D8%B1." target="_blank" class="btn-footer-whatsapp" id="footer-whatsapp">
+            💬 تواصل عبر واتساب: 01018390782
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Professional Closing Statement (Requested by User) -->
+      <div class="closing-banner">
+        <h3>كلمة شكر وتقدير من أسرة &quot;كنانى&quot;</h3>
+        <p>
+          نشكركم لاختياركم <strong>كنانى للعطور (Kenany Perfumes)</strong> – نعتز بثقتكم الغالية، ويسعدنا دائماً أن نكون بصمتكم العطرية المميزة التي تخلد أجمل لحظاتكم وتمنحكم حضوراً فائق الأناقة والجاذبية. شكراً لزيارتكم ودمتم بعبير الفخامة.
+        </p>
+        <div class="closing-banner-en">
+          Thank you for choosing Kenany. We are honored to craft your olfactory signature.
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>© 2026 كنانى للعطور (Kenany Perfumes). جميع الحقوق محفوظة.</div>
+        <div style="direction:ltr; font-family:monospace; color:var(--gold-light);">
+          Phone & WhatsApp: 01018390782
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/201018390782?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%86%D8%A7%D9%86%D9%89%20%D9%84%D9%84%D8%B9%D8%B7%D9%88%D8%B1%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%B2%D9%8A%D9%88%D8%AA%20%D8%A7%D9%84%D9%85%D8%AA%D8%A7%D8%AD%D8%A9." target="_blank" class="floating-whatsapp" title="واتساب كنانى">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <!-- Notes Popup Modal -->
+  <div class="modal-overlay" id="notesModal" onclick="closeNotesModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="btn-modal-close" onclick="closeNotesModal()">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Pure Vanilla JavaScript (No Frameworks) -->
+  <script>
+    // Complete Fragrances Array (All 40 required + 15 bestsellers = 55 total)
+    const fragrancesData = [
+      { id: 'sauvage', name: 'Sauvage', arName: 'سوفاج', brand: 'Dior', gender: 'men', genderAr: 'رجالي', familyAr: 'أروماتك فوچير منعش', topAr: 'برغموت كالابريا، فلفل حار', heartAr: 'فلفل سيتشوان، لافندر فرنسي، فلفل وردي، نجيل الهند', baseAr: 'أمبروكسان نقي، خشب الأرز، لابدانوم', desc: 'العطر الرجالي الأكثر شهرة عالمياً بطابعه الجذاب والمنعش الحاد مع ثبات أسطوري.' },
+      { id: 'bleu-de-chanel', name: 'Bleu de Chanel', arName: 'بلو دي شانيل', brand: 'Chanel', gender: 'men', genderAr: 'رجالي', familyAr: 'خشبي أروماتك فاخر', topAr: 'جريب فروت، ليمون منعش، نعناع بارد، فلفل وردي', heartAr: 'زنجبيل نضر، جوزة الطيب، ياسمين', baseAr: 'بخور ملكي، خشب الصندل، خشب الأرز، مسك أبيض', desc: 'قمة الأناقة الفرنسية الكلاسيكية، يجمع بين انتعاش الحمضيات وعمق البخور والأخشاب.' },
+      { id: 'aventus', name: 'Aventus', arName: 'أفنتوس', brand: 'Creed', gender: 'men', genderAr: 'رجالي', familyAr: 'فاكهي مدخن أرستقراطي', topAr: 'أناناس ملكي، برغموت، كشمش أسود، تفاح', heartAr: 'أخشاب البتولا المدخنة، باتشولي، ياسمين مغربي', baseAr: 'مسك فاخر، طحلب البلوط، عنبر الحوت، فانيليا', desc: 'عطر الملوك والفرسان، توليفة ساحرة من الأناناس المنعش مع نفحات أخشاب البتولا المدخنة.' },
+      { id: 'invictus', name: 'Invictus', arName: 'إنفكتوس', brand: 'Paco Rabanne', gender: 'men', genderAr: 'رجالي', familyAr: 'مائي خشبي رياضي', topAr: 'أمواج بحرية منعشة، جريب فروت، يوسفي', heartAr: 'أوراق الغار الملكي، ياسمين', baseAr: 'عنبر الحوت، خشب الغاياك، طحلب البلوط', desc: 'عطر النصر والطاقة الحيوية المنعشة برائحة البحر والنفحات الرياضية الجذابة.' },
+      { id: 'one-million', name: '1 Million', arName: 'وان مليون', brand: 'Paco Rabanne', gender: 'men', genderAr: 'رجالي', familyAr: 'تابلي دافئ مع لمسة جلدية', topAr: 'يوسفي أحمر، جريب فروت، نعناع', heartAr: 'قرفة حارة، توابل عطرية، ورد جوري', baseAr: 'عنبر ذهبي، جلد ناعم، أخشاب ثمينة', desc: 'عطر الجاذبية الذهبية المطلقة بمزيج القرفة والعنبر والجلود الفاخرة.' },
+      { id: 'stronger-with-you', name: 'Stronger With You', arName: 'سترونجر ويز يو', brand: 'Emporio Armani', gender: 'men', genderAr: 'رجالي', familyAr: 'أروماتك دافئ ومحلى بالكستناء', topAr: 'حبهان / هيل، فلفل وردي، نعناع', heartAr: 'كستناء محلاة، أناناس، شمام، قرفة', baseAr: 'فانيليا مدغشقر، كستناء، خشب العنبر', desc: 'من أروع العطور الرومانسية الدافئة، يجمع بين الكستناء المحلاة والفانيليا الغنية والتوابل.' },
+      { id: 'ultra-male', name: 'Ultra Male', arName: 'ألترا ميل', brand: 'JPG', gender: 'men', genderAr: 'رجالي', familyAr: 'عنبري فاكهي مغري', topAr: 'كمثرى ناضجة، لافندر فرنسي، نعناع', heartAr: 'قرفة حارة، مرمية كلاري، كراوية ناعمة', baseAr: 'فانيليا سوداء كثيفة، عنبر دافئ، باتشولي', desc: 'قنبلة الفواح والجاذبية الليلية برائحة الكمثرى والفانيليا السوداء والقرفة.' },
+      { id: 'le-male', name: 'Le Male', arName: 'لو ميل', brand: 'JPG', gender: 'men', genderAr: 'رجالي', familyAr: 'أروماتك كلاسيكي باودري', topAr: 'خزامى (لافندر)، نعناع بارد، حبهان', heartAr: 'قرفة دافئة، زهر البرتقال، كراوية', baseAr: 'فانيليا ناعمة، حبوب التونكا، عنبر', desc: 'الأسطورة الكلاسيكية للجاذبية الذكورية بنفحات اللافندر والنعناع والفانيليا المهدئة.' },
+      { id: 'eros', name: 'Eros', arName: 'إيروس', brand: 'Versace', gender: 'men', genderAr: 'رجالي', familyAr: 'أروماتك منعش ومغري', topAr: 'نعناع منعش حاد، تفاح أخضر، ليمون إيطالي', heartAr: 'حبوب التونكا، أمبروكسان، إبرة الراعي', baseAr: 'فانيليا مدغشقر، خشب الأرز، نجيل الهند', desc: 'عطر إله الحب والإغراء، انفجار من النعناع البارد مع التونكا والفانيليا الفاخرة.' },
+      { id: 'y-edp', name: 'Y EDP', arName: 'واي أو دو بارفان', brand: 'YSL', gender: 'men', genderAr: 'رجالي', familyAr: 'أروماتك خشبي منعش حديث', topAr: 'تفاح أخضر منعش، زنجبيل طازج، برغموت', heartAr: 'مرمية أنيقة، توت العرعر، إبرة الراعي', baseAr: 'خشب العنبر، حبوب التونكا، خشب الأرز', desc: 'عطر الرجل العصري الناجح، مزيج مذهل من التفاح والزنجبيل مع خشب العنبر الفاخر.' },
+      { id: 'acqua-di-gio', name: 'Acqua Di Gio', arName: 'أكوا دي جيو', brand: 'Armani', gender: 'men', genderAr: 'رجالي', familyAr: 'مائي أروماتك أسطوري', topAr: 'لايم بحري، ليمون، برغموت، نيرولي', heartAr: 'نسيم البحر الأبيض المتوسط، روزماري، كالون', baseAr: 'مسك أبيض نقي، خشب الأرز، باتشولي', desc: 'العطر الصيفي المائي الأكثر مبيعاً في تاريخ العطور، نسيم البحر والجزر الإيطالية الساحرة.' },
+      { id: 'layton', name: 'Layton', arName: 'ليتون بارفيومز دي مارلي', brand: 'Parfums de Marly', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'نيش ملكي فانيليا وتفاح وتوابل', topAr: 'تفاح كراميل مقرمش، خزامى، برغموت', heartAr: 'حبهان هندي، ياسمين، بنفسج مخملي', baseAr: 'فانيليا بوربون، فلفل أسود، صندل، باتشولي', desc: 'عطر النيش الملكي الفاخر بامتياز، تداخل التفاح واللافندر مع الفانيليا الفخمة والهيل.' },
+      { id: 'dunhill', name: 'Dunhill Desire', arName: 'دنهل ديزاير الأحمر', brand: 'Dunhill', gender: 'men', genderAr: 'رجالي', familyAr: 'عنبري فاكهي شرقي جذاب', topAr: 'تفاح أحمر، ليمون منعش، نيرولي', heartAr: 'ورد جوري، خشب الساج الفاخر، باتشولي', baseAr: 'فانيليا دافئة، مسك ناعم', desc: 'العطر الرجالي الجذاب ذو الهالة المغناطيسية برائحة التفاح والخشب الدافئ والفانيليا.' },
+      { id: 'pi-givenchy', name: 'Pi Givenchy', arName: 'باي جيفنشي', brand: 'Givenchy', gender: 'men', genderAr: 'رجالي', familyAr: 'عنبري خشبي سويت فاخر', topAr: 'يوسفي، طرحون، إكليل الجبل، ريحان', heartAr: 'يانسون نجمي، نيرولي، إبرة الراعي', baseAr: 'فانيليا كريمية، لوز حلو محمص، تونكا، بنزوين', desc: 'تحفة دافئة كالحرير بمزيج اللوز المحمص والفانيليا البنزوين لمحبّي العطور السويت.' },
+      { id: 'bianco-latte', name: 'Bianco Latte', arName: 'بيانكو لاتي', brand: 'Giardini Di Toscana', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'غورماند كراميل وحليب وعسل', topAr: 'كراميل سائل دافئ', heartAr: 'عسل نحل ذهبي، كومارين ناعم', baseAr: 'فانيليا حليبية كريمية، مسك أبيض نظيف', desc: 'تريند العطور العالمي، رائحة الكراميل بالحليب والفانيليا والعسل كحلوى إيطالية فاخرة.' },
+      { id: 'sculpture', name: 'Sculpture', arName: 'سكالبشر هوم', brand: 'Nikos', gender: 'men', genderAr: 'رجالي', familyAr: 'زهري حمضي عنبري مشرق', topAr: 'زهر البرتقال المتوسطي، ليمون، برغموت', heartAr: 'ياسمين ندي، زنبق الوادي، ورد', baseAr: 'حبوب التونكا الحلوة، بنزوين، عنبر دافئ', desc: 'العطر الإغريقي المنعش الأنيق بنفحات زهر البرتقال والتونكا الساحرة.' },
+      { id: 'khamrah-qahwa', name: 'Khamrah Qahwa', arName: 'خمرة قهوة', brand: 'Lattafa', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'قهوة عربية وتوابل شرقية دافئة', topAr: 'قرفة حارة، هيل عربي أصيل، زنجبيل', heartAr: 'بن محمص غني (قهوة)، برالين كراميل، فواكه مسكرة', baseAr: 'فانيليا دافئة، تونكا، بنزوين، مسك', desc: 'مزيج القهوة العربية المحمصة مع الهيل والقرفة والبرالين، عطر شتوي غني بالفخامة.' },
+      { id: 'khamrah-smoke', name: 'Khamrah Smoke', arName: 'خمرة سموك (مدخن)', brand: 'Lattafa', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'عنبري خشبي بخوري مدخن', topAr: 'جوزة الطيب، قرفة دافئة، برغموت', heartAr: 'تمر سكري فاخر، برالين، بخور مدخن ثقيل', baseAr: 'أخشاب مدخنة، لمسة عود راقية، فانيليا، مر', desc: 'نسخة عميقة مدخنة معززة بعبير البخور والأخشاب المحترقة مع حلاوة التمر والتوابل.' },
+      { id: 'khamrah', name: 'Khamrah', arName: 'خمرة الأصلي', brand: 'Lattafa', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'تابلي دافئ تمور وبرالين وفانيليا', topAr: 'قرفة غنية، جوزة الطيب، برغموت', heartAr: 'تمر محلى، برالين شوكولاتة، مسك الروم', baseAr: 'فانيليا كريمية، تونكا، بنزوين، خشب العنبر', desc: 'العطر الأكثر شهرة وشعبية بفوحان جبار ورائحة التمر والبرالين الفاخر.' },
+      { id: 'black-opium', name: 'Black Opium', arName: 'بلاك أوبيوم', brand: 'YSL', gender: 'women', genderAr: 'حريمي', familyAr: 'عنبري فانيليا وقهوة مغري', topAr: 'كمثرى لذيذة، فلفل وردي، زهر البرتقال', heartAr: 'قهوة سوداء مركزة، ياسمين مسكر، لوز مر', baseAr: 'فانيليا دافئة، باتشولي ناعم، خشب الكشمير', desc: 'جرعة من الأدرينالين والإثارة الأنثوية مع القهوة السوداء والفانيليا الساحرة.' },
+      { id: 'burberry-her', name: 'Burberry Her', arName: 'بربري هير', brand: 'Burberry', gender: 'women', genderAr: 'حريمي', familyAr: 'فاكهي توت وفراولة مسكي', topAr: 'فراولة طازجة، توت أحمر، كرز حامض', heartAr: 'زهور البنفسج، ياسمين ندي', baseAr: 'مسك ناعم نظيف، فانيليا مخملية، كشميران', desc: 'سحر التوت البريطاني والفراولة البرية المحاطة بالمسك الكشميري الرقيق.' },
+      { id: 'madawi-oud', name: 'Madawi Oud', arName: 'مضاوي عود', brand: 'Arabian Oud', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'شرقي فاخر زهور وعود وخوخ', topAr: 'خوخ مخملي، زهر التفاح، برغموت', heartAr: 'زهر الأناناس، ورد جوري دمشقي', baseAr: 'عود كمبودي فاخر، مسك الغزال، عنبر ملكي', desc: 'عطر الفخامة الشرقية والخليجية الأيقوني بزهور الخوخ مع العود الكمبودي النقي.' },
+      { id: 'marbert-man', name: 'Marbert Man', arName: 'ماربرت مان الكلاسيكي', brand: 'Marbert', gender: 'men', genderAr: 'رجالي', familyAr: 'تشيبر جلدي وأعشاب كلاسيكي', topAr: 'برغموت، لافندر، شيح عشبي', heartAr: 'إبرة الراعي، قرفة دافئة، قرنفل، عسل', baseAr: 'جلد طبيعي عتيق، طحلب السنديان، أرز، باتشولي', desc: 'عطر الرجولة الأصيلة الكلاسيكية، ثبات وهيبة عطرية لا تتكرر بالجلود العتيقة.' },
+      { id: 'angels-share', name: "Angels' Share", arName: 'أنجلز شير', brand: 'Kilian', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'كونياك وقرفة وفانيليا وبلوط نيش', topAr: 'مستخلص الكونياك الفاخر المعتّق', heartAr: 'قرفة فاخرة، حبوب التونكا، خشب البلوط', baseAr: 'برالين كراميل، فانيليا ناعمة، خشب الصندل', desc: 'تحفة دار كيليان الباريسية، براميل البلوط المعتّقة بالكونياك والقرفة والبرالين.' },
+      { id: 'black-xs', name: 'Black XS', arName: 'بلاك إكس إس', brand: 'Paco Rabanne', gender: 'men', genderAr: 'رجالي', familyAr: 'تابلي دافئ مع لمسة برالين وليمون', topAr: 'ليمون كالابريا الحامض، كالامانزي', heartAr: 'حلوى البرالين، قرفة، حبهان أسود', baseAr: 'عنبر أسود، باتشولي، خشب الأبنوس', desc: 'عطر الروك والشباب المتمرد، تضارب ممتع بين الحمضيات وحلاوة شوكولاتة البرالين.' },
+      { id: 'erba-pura', name: 'Erba Pura', arName: 'إربا بورا', brand: 'Xerjoff', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'سلة فواكه متوسطية ومسك أبيض نيش', topAr: 'برتقال صقلي مشرق، برغموت، ليمون صقلي', heartAr: 'سلة فواكه استوائية متوسطية حلوة', baseAr: 'مسك أبيض نظيف مكثف، فانيليا مدغشقر، عنبر', desc: 'قنبلة الفواح والبهجة، سلة فواكه استوائية غنية مغمورة بالمسك الأبيض والفانيليا.' },
+      { id: 'raghba', name: 'Raghba', arName: 'رغبة', brand: 'Lattafa', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'فانيليا وبخور وسكر محروق وعود', topAr: 'سكر مكرمل دافئ، فانيليا', heartAr: 'بخور شرقي، خشب العود، صندل', baseAr: 'مسك غني، عنبر بلسمي، لمسة جلدية', desc: 'عطر العشاق الشرقي، حلاوة السكر المكرمل مع دفء خشب العود والبخور المعطر.' },
+      { id: 'very-sexy', name: 'Very Sexy', arName: 'فيري سيكسي', brand: "Victoria's Secret", gender: 'women', genderAr: 'حريمي', familyAr: 'توت أسود وكليمنتين وفانيليا أنثوي', topAr: 'توت العليق الأسود، كليمنتين، كابتشينو', heartAr: 'أوركيد فخم، ميموزا ناعمة، كاميليا', baseAr: 'مسك مغري، عنبر دافئ، أخشاب ناعمة', desc: 'العطر الأنثوي المثير الأشهر، مزيج من التوت الأسود والكليمنتين مع الأوركيد والمسك.' },
+      { id: '212-vip', name: '212 VIP Men', arName: '212 في آي بي', brand: 'Carolina Herrera', gender: 'men', genderAr: 'رجالي', familyAr: 'باشن فروت وتوابل ونفحات حفلات', topAr: 'باشن فروت، لايم حامض، فلفل أسود، زنجبيل', heartAr: 'نعناع مثلج، توابل عطرية منعشة', baseAr: 'عنبر دافئ، جلد شبابي أنيق، أخشاب', desc: 'تذكرة دخول عالم السهرات والحفلات الفاخرة برائحة الباشن فروت والنعناع المثلج.' },
+      { id: 'turab-al-dhahab', name: 'Turab Al Dhahab', arName: 'تراب الذهب', brand: 'Ard Al Zaafaran', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'جوز هند دافئ وفانيليا ومسك شرقي', topAr: 'لايم منعش، برغموت، يانسون', heartAr: 'جوز هند كريمي، قصب سكر حلو، إيلنغ إيلنغ', baseAr: 'فانيليا غنية، مسك أبيض قطني، صندل', desc: 'رائحة شمسية ذهبية استوائية غنية بجوز الهند الكريمي وقصب السكر والمسك الأبيض.' },
+      { id: 'alexandria-ii', name: 'Alexandria II', arName: 'إسكندرية 2', brand: 'Xerjoff', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'نيش فخم لافندر وعود معتق وخشب الصندل', topAr: 'خشب الورد الباليساندر، خزامى فرنسية، قرفة', heartAr: 'ورد بلغاري ملكي، خشب الأرز، زنبق الوادي', baseAr: 'عود لاوسي معتق فاخر، خشب الصندل، عنبر', desc: 'إمبراطورية من الفخامة الأرستقراطية، لافندر ناعم مع أندر أنواع العود اللاوسي.' },
+      { id: 'fahrenheit', name: 'Fahrenheit', arName: 'فهرنهايت', brand: 'Dior', gender: 'men', genderAr: 'رجالي', familyAr: 'جلدي بنفسج خشبي لا مثيل له', topAr: 'زهور جوزة الطيب، خزامى، أرز، يوسفي', heartAr: 'أوراق البنفسج الخضراء المميزة، جوزة الطيب', baseAr: 'نفحة جلدية حادة فريدة، نجيل الهند، مسك', desc: 'البصمة العطرية التي قلبت موازين الرجولة، نوتة البنفسج الخضراء مع الجلد والحرارة.' },
+      { id: 'ombre-leather', name: 'Ombré Leather', arName: 'أومبري ليزر', brand: 'Tom Ford', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'جلدي خام ناعم وهيل وياسمين نيش', topAr: 'هيل أخضر فاخر نقي', heartAr: 'جلد فاخر ناعم، ياسمين سامباك', baseAr: 'عنبر دافئ، طحالب خضراء، باتشولي', desc: 'أنقى رائحة جلد في العالم، فخامة مطلقة مستوحاة من صحراء الغرب الأمريكي.' },
+      { id: 'tommy', name: 'Tommy', arName: 'تومي هيلفيغر', brand: 'Tommy Hilfiger', gender: 'men', genderAr: 'رجالي', familyAr: 'حمضي منعش نظيف برائحة التفاح والنعناع', topAr: 'نعناع بارد، برغموت، جريب فروت، خزامى', heartAr: 'تفاح أخضر أمريكي، توت بري، ورد', baseAr: 'زهر القطن النظيف، صبار، عنبر خفيف', desc: 'عطر الانتعاش والشباب اليومي النظيف، يمنحك إحساس النظافة والحيوية بعد الاستحمام.' },
+      { id: 'gucci-rush', name: 'Gucci Rush', arName: 'جوتشي راش', brand: 'Gucci', gender: 'women', genderAr: 'حريمي', familyAr: 'خوخ وباتشولي وفانيليا مغناطيسي', topAr: 'خوخ ناضج غني، غاردينيا، فريسيا', heartAr: 'كزبرة دافئة، ورد دمشقي، ياسمين', baseAr: 'باتشولي قوي مغناطيسي، فانيليا طبيعية', desc: 'العطر النسائي الجريء والمغري ذو الفوحان الكثيف برائحة الخوخ الحار والباتشولي.' },
+      { id: 'coco-mademoiselle', name: 'Coco Mademoiselle', arName: 'كوكو مادموزيل', brand: 'Chanel', gender: 'women', genderAr: 'حريمي', familyAr: 'زهري شرقي ناعم برتقال وباتشولي', topAr: 'برتقال صقلي مشرق، يوسفي، برغموت', heartAr: 'ورد تركي ندي، ياسمين فرنسي، ميموزا', baseAr: 'باتشولي نقي مخفف، مسك أبيض راقي، فانيليا', desc: 'ملكة العطور النسائية الفرنسية، تجسيد للرقي والأناقة والأنوثة المستقلة.' },
+      { id: 'good-girl', name: 'Good Girl', arName: 'جود جيرل', brand: 'Carolina Herrera', gender: 'women', genderAr: 'حريمي', familyAr: 'لوز وتونكا وكاكاو وياسمين جذاب', topAr: 'لوز مقرمش، قهوة دافئة، برغموت', heartAr: 'مسك الروم، ياسمين سامباك، زهر البرتقال', baseAr: 'حبوب التونكا، كاكاو داكن، فانيليا وكراميل', desc: 'تناقض ساحر بين نقاء زهور التيوب روز البيضاء وعمق الكاكاو والتونكا والقهوة.' },
+      { id: 'ehsas', name: 'Ehsas', arName: 'إحساس الشرقي', brand: 'Arabian Oud', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'شرقي فاخر زهور وورد ودهن عود وعنبر', topAr: 'ورد أبيض نقي، برغموت، زعفران إيراني', heartAr: 'خشب الأرز اللبناني، ياسمين مخملي', baseAr: 'دهن عود صافي، عنبر دافئ فواح، مسك أبيض', desc: 'عطر الإحساس والمشاعر الشرقية الفياضة، الزعفران والورد والعود الملكي المطعم بالعنبر.' },
+      { id: 'si-passione', name: 'Sì Passione', arName: 'سي باسيون (الأحمر)', brand: 'Armani', gender: 'women', genderAr: 'حريمي', familyAr: 'فاكهي زهري مشرق كشمش أسود وكمثرى', topAr: 'كمثرى ناعمة، كشمش أسود، فلفل وردي', heartAr: 'أناناس مشرق، ورد أحمر ندي، ياسمين', baseAr: 'فانيليا رقيقة، خشب الأرز، باتشولي', desc: 'عطر الشغف واللون الأحمر، إعلان صريح بالثقة والأنوثة الجريئة بعبير الكشمش والورد.' },
+      { id: 'scandal', name: 'Scandal', arName: 'سكاندال', brand: 'JPG', gender: 'women', genderAr: 'حريمي', familyAr: 'عسل نحل نقي وغاردينيا وباتشولي مسكر', topAr: 'برتقال أحمر ياقوتي، يوسفي طازج', heartAr: 'عسل نحل ذهبي ثقيل، غاردينيا بيضاء', baseAr: 'شمع العسل الفاخر، كراميل دافئ، باتشولي', desc: 'عطر الفضيحة والإغراء المسكر، بحر من العسل الذهبي والكراميل الممزوجين بالغاردينيا.' },
+
+      // 15 Bestselling Global Additions
+      { id: 'baccarat-rouge-540', name: 'Baccarat Rouge 540', arName: 'باكارات روج 540', brand: 'MFK', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'نيش سكر محروق وزعفران وعنبر حيتان', topAr: 'زعفران نقي أحمر، ياسمين مائي', heartAr: 'خشب العنبر المضيء، عنبر الحوت', baseAr: 'صمغ التنوب البلسمي، خشب الأرز', desc: 'العطر النيش الأكثر شهرة وانتشاراً في العصر الحديث، توقيع عطري هوائي لا يُنسى.' },
+      { id: 'tobacco-vanille', name: 'Tobacco Vanille', arName: 'توباكو فانيل', brand: 'Tom Ford', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'تبغ فاخر وفانيليا وفواكه مجففة نيش', topAr: 'أوراق التبغ الكوبية الفاخرة، توابل عطرية', heartAr: 'فانيليا بوربون مكثفة، كاكاو داكن، تونكا', baseAr: 'فواكه مجففة معسلة، أخشاب راقية', desc: 'قمة الفخامة الشتوية من توم فورد، مزيج غني من أوراق التبغ المعتقة مع الفانيليا.' },
+      { id: 'silver-mountain-water', name: 'Silver Mountain Water', arName: 'سيلفر ماونتن ووتر', brand: 'Creed', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'شاي أخضر وكشمش وثلوج جبال الألب', topAr: 'برغموت مثلج، يوسفي منعش', heartAr: 'شاي أخضر نقي منعش، كشمش أسود', baseAr: 'مسك أبيض جليدي، بيتيغرين، صندل', desc: 'نسيم الثلوج المتلألئة على قمم جبال الألب السويسرية بعبير الشاي الأخضر والكشمش.' },
+      { id: 'dior-homme-intense', name: 'Dior Homme Intense', arName: 'ديور هوم إنتنس', brand: 'Dior', gender: 'men', genderAr: 'رجالي', familyAr: 'سوسن باودري وكاكاو وخشب أرز ملكي', topAr: 'خزامى فرنسية نقية', heartAr: 'سوسن باودري أرستقراطي، أمبريت، كمثرى', baseAr: 'خشب أرز فيرجينيا العريق، نجيل الهند', desc: 'القمة المطلقة للشياكة الرسمية الرجالية بنوتة السوسن الباودرية الفاخرة والأخشاب.' },
+      { id: 'chocolate-greedy', name: 'Chocolate Greedy', arName: 'شوكليت جريدي', brand: 'Montale', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'بسكويت شوكولاتة وكاكاو وبن دافئ', topAr: 'بن محمص، كاكاو دافئ', heartAr: 'برتقال مر معسل، فانيليا كوكيز', baseAr: 'حبوب التونكا، فواكه مجففة حلوة', desc: 'لكل عشاق الكاكاو، رائحة كوكيز الشوكولاتة المخبوزة طازجة مع الفانيليا والبن.' },
+      { id: 'oud-for-greatness', name: 'Oud for Greatness', arName: 'عود فور جريتنس', brand: 'Initio', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'عود طبيعي وزعفران وجوزة الطيب نيش', topAr: 'زعفران ملكي أحمر، جوزة الطيب، خزامى', heartAr: 'عود طبيعي نقي عالي التركيز', baseAr: 'باتشولي أرضي فاخر، مسك أبيض نقي', desc: 'طاقة العود الخالصة المهيبة، تمازج حاد بين الزعفران وجوزة الطيب مع خشب العود.' },
+      { id: 'by-the-fireplace', name: 'By the Fireplace', arName: 'باي ذا فايربليس', brand: 'Maison Margiela', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'كستناء مشوية وأخشاب مدخنة وفانيليا', topAr: 'قرنفل دافئ، فلفل وردي، زهر البرتقال', heartAr: 'كستناء مشوية على الحطب، خشب الغاياك', baseAr: 'فانيليا دافئة مريحة، بلسم بيرو، كشميران', desc: 'إحساس الدفء المطلق في ليلة شتوية بجوار مدفأة الحطب مع رائحة الكستناء المشوية.' },
+      { id: 'dylan-blue', name: 'Dylan Blue', arName: 'ديلان بلو', brand: 'Versace', gender: 'men', genderAr: 'رجالي', familyAr: 'أزرق منعش بخور وأمبروكسان وبحر', topAr: 'برغموت كالابريا، أمواج مائية، جريب فروت', heartAr: 'أمبروكسان فواح، فلفل أسود، باتشولي', baseAr: 'بخور غامض، مسك نظيف، تونكا، زعفران', desc: 'الأزرق المتوسطي الجريء، انتعاش البحر والبرغموت مع قاعدة بخورية عميقة لا تقاوم.' },
+      { id: 'narciso-for-her', name: 'For Her EDP', arName: 'نارسيسو رودريغيز فور هير', brand: 'Narciso', gender: 'women', genderAr: 'حريمي', familyAr: 'مسك نقي أنثوي وورد ودراق وباتشولي', topAr: 'ورد زهري ناعم، خوخ دراق مخملي', heartAr: 'قلب المسك الشهير الخالص لنارسيسو', baseAr: 'باتشولي نقي، خشب الصندل الكريمي', desc: 'سحر المسك الأنثوي الحريري الأكثر نقاءً وجاذبية، أنوثة هادئة وراقية تذوب في الحواس.' },
+      { id: 'ysl-libre', name: 'Libre EDP', arName: 'إيف سان لوران ليبر', brand: 'YSL', gender: 'women', genderAr: 'حريمي', familyAr: 'لافندر فرنسي وزهر برتقال وفانيليا حرة', topAr: 'خزامى فرنسية منعشة، يوسفي مشرق', heartAr: 'لافندر مقطر، زهر البرتقال المغربي', baseAr: 'فانيليا مدغشقر الغنية، مسك نظيف، أرز', desc: 'عطر الحرية والجرأة للمرأة العصرية القوية، تزاوج مبتكر بين اللافندر وزهر البرتقال.' },
+      { id: 'lost-cherry', name: 'Lost Cherry', arName: 'لوست شيري', brand: 'Tom Ford', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'كرز أسود مسكر ولوز مر وفانيليا نيش', topAr: 'لوز مر أرستقراطي، كرز أسود ناضج', heartAr: 'كرز حامض بري، برقوق مجفف، ورد تركي', baseAr: 'فانيليا مدغشقر، تونكا دافئة، قرفة، صندل', desc: 'عطر الكرز الأسود الحصري الأكثر جاذبية وإغراء في عالم النيش، حلوى تنبض باللذة.' },
+      { id: 'le-male-elixir', name: 'Le Male Elixir', arName: 'لو ميل إلكسير', brand: 'JPG', gender: 'men', genderAr: 'رجالي', familyAr: 'عسل ولافندر وتونكا وبنزوين مركز', topAr: 'خزامى مكثفة، نعناع طازج', heartAr: 'فانيليا غنية محروقة، راتنج البنزوين', baseAr: 'عسل ذهبي دافئ، حبوب التونكا، لمسة تبغ', desc: 'الإكسير الذهبي الأكثر إشعالاً للحواس، فوحان ذهبي لا ينتهي من العسل والتونكا.' },
+      { id: 'black-phantom', name: 'Black Phantom', arName: 'بلاك فانتوم', brand: 'Kilian', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'قهوة سوداء وقصب سكر وشوكولاتة ولوز نيش', topAr: 'مستخلص مشروب القراصنة، سكر قصب', heartAr: 'شوكولاتة داكنة مرة، قهوة إسبريسو، كراميل', baseAr: 'هيليوتروب مخملي، خشب الصندل الدافئ', desc: 'عطر القراصنة الغامض بنفحات القهوة الإيرلندية والشوكولاتة الداكنة واللوز.' },
+      { id: 'naxos', name: 'Naxos 1861', arName: 'ناكسوس 1861', brand: 'Xerjoff', gender: 'unisex', genderAr: 'للجنسين', familyAr: 'عسل صقلي وتبغ معتق ولافندر وحمضيات نيش', topAr: 'خزامى إيطالية، برغموت صقلي، ليمون', heartAr: 'عسل نحل صقلي معتق، قرفة دافئة', baseAr: 'أوراق التبغ الذهبي الفاخر، تونكا، فانيليا', desc: 'العطر النيش الأسطوري المستوحى من جزيرة صقلية، تناغم معجز بين العسل الصافي والتبغ.' },
+      { id: 'imagination', name: 'Imagination', arName: 'إيماجينيشن لويس فيتون', brand: 'Louis Vuitton', gender: 'men', genderAr: 'رجالي', familyAr: 'شاي أسود وأمبروكسان وحمضيات إيطالية نيش', topAr: 'أترج إيطالي فاخر، برغموت كالابريا، برتقال', heartAr: 'نيرولي تونسي مشرق، زنجبيل نيجيري، قرفة', baseAr: 'شاي أسود صيني نادر، أمبروكسان نقي، غاياك', desc: 'قمة الانتعاش الفاره في العالم، شاي أسود نادر مع أمبروكسان نقي وحمضيات كالابريا.' }
+    ];
+
+    let currentFilter = 'all';
+
+    function renderFragrances(items) {
+      const container = document.getElementById('oilsGridContainer');
+      // keep special card
+      const specialCard = document.getElementById('special-request');
+      
+      // Clear old cards except special request card
+      container.innerHTML = '';
+      if (specialCard) container.appendChild(specialCard);
+
+      items.forEach(frag => {
+        const card = document.createElement('div');
+        card.className = 'fragrance-card';
+        card.id = 'frag-' + frag.id;
+
+        const genderClass = frag.gender === 'men' ? 'gender-men' : frag.gender === 'women' ? 'gender-women' : 'gender-unisex';
+        const whatsappMsg = encodeURIComponent('مرحباً كنانى للعطور، أود طلب زيت عطر (' + frag.arName + ' - ' + frag.name + ') لعمل تركيبة خاصة.');
+
+        card.innerHTML = `
+          <div>
+            <div class="fragrance-card-header">
+              <span class="brand-badge">${frag.brand}</span>
+              <span class="gender-badge ${genderClass}">${frag.genderAr}</span>
+            </div>
+            <h3 class="fragrance-title">${frag.arName}</h3>
+            <p class="fragrance-title-en">${frag.name}</p>
+            <span class="fragrance-family">${frag.familyAr}</span>
+            <p class="fragrance-desc">${frag.desc}</p>
+            <div class="notes-box">
+              <div class="note-row">
+                <span class="note-label">🍋 الافتتاحية:</span>
+                <span class="note-value">${frag.topAr}</span>
+              </div>
+              <div class="note-row">
+                <span class="note-label">🌸 القلب:</span>
+                <span class="note-value">${frag.heartAr}</span>
+              </div>
+              <div class="note-row">
+                <span class="note-label">🪵 القاعدة:</span>
+                <span class="note-value">${frag.baseAr}</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://wa.me/201018390782?text=${whatsappMsg}" target="_blank" class="btn-order-oil">
+              طلب الزيت عبر واتساب
+            </a>
+            <button class="btn-secondary" style="padding: 8px 12px; font-size:12px;" onclick="openNotesModal('${frag.id}')">
+              نوتات كاملة
+            </button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function filterFragrances() {
+      const q = document.getElementById('oilSearchInput').value.toLowerCase().trim();
+
+      const filtered = fragrancesData.filter(frag => {
+        // filter by category
+        if (currentFilter === 'men' && frag.gender !== 'men') return false;
+        if (currentFilter === 'women' && frag.gender !== 'women') return false;
+        if (currentFilter === 'unisex' && frag.gender !== 'unisex') return false;
+        if (currentFilter === 'niche' && !frag.familyAr.includes('نيش')) return false;
+        if (currentFilter === 'oud' && !frag.familyAr.includes('عود') && !frag.baseAr.includes('عود') && !frag.heartAr.includes('عود')) return false;
+        if (currentFilter === 'gourmand' && !frag.familyAr.includes('غورماند') && !frag.desc.includes('كراميل') && !frag.desc.includes('فانيليا') && !frag.desc.includes('قهوة')) return false;
+
+        // search query
+        if (q) {
+          const matchName = frag.name.toLowerCase().includes(q);
+          const matchAr = frag.arName.includes(q);
+          const matchBrand = frag.brand.toLowerCase().includes(q);
+          const matchTop = frag.topAr.includes(q);
+          const matchHeart = frag.heartAr.includes(q);
+          const matchBase = frag.baseAr.includes(q);
+          return matchName || matchAr || matchBrand || matchTop || matchHeart || matchBase;
+        }
+
+        return true;
+      });
+
+      renderFragrances(filtered);
+    }
+
+    function setFilter(category, btn) {
+      currentFilter = category;
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterFragrances();
+    }
+
+    function openNotesModal(fragId) {
+      const frag = fragrancesData.find(f => f.id === fragId);
+      if (!frag) return;
+
+      const modalBody = document.getElementById('modalBody');
+      const whatsappMsg = encodeURIComponent('مرحباً كنانى، أود طلب زيت عطر ' + frag.arName);
+
+      modalBody.innerHTML = `
+        <div style="margin-bottom: 16px;">
+          <span style="font-size:12px; color:var(--gold-primary); font-family:'Cinzel';">${frag.brand} • ${frag.genderAr}</span>
+          <h3 style="font-size:24px; color:#fff; margin-top:4px;">${frag.arName}</h3>
+          <p style="font-size:14px; color:#a0a0b0; font-family:'Cinzel';">${frag.name}</p>
+        </div>
+        <p style="font-size:13px; color:#d0d0e0; line-height:1.7; margin-bottom:20px; background:#08080c; padding:12px; border-radius:10px; border:1px solid rgba(212,175,55,0.2);">
+          ${frag.desc}
+        </p>
+        <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:24px;">
+          <div style="background:#161622; padding:12px; border-radius:10px; border:1px solid rgba(212,175,55,0.15);">
+            <strong style="color:var(--gold-light); font-size:13px; display:block; margin-bottom:4px;">🍋 الافتتاحية (Top Notes):</strong>
+            <span style="font-size:13px; color:#f0f0f5;">${frag.topAr}</span>
+          </div>
+          <div style="background:#161622; padding:12px; border-radius:10px; border:1px solid rgba(212,175,55,0.15);">
+            <strong style="color:var(--gold-light); font-size:13px; display:block; margin-bottom:4px;">🌸 قلب العطر (Heart Notes):</strong>
+            <span style="font-size:13px; color:#f0f0f5;">${frag.heartAr}</span>
+          </div>
+          <div style="background:#161622; padding:12px; border-radius:10px; border:1px solid rgba(212,175,55,0.15);">
+            <strong style="color:var(--gold-light); font-size:13px; display:block; margin-bottom:4px;">🪵 قاعدة العطر (Base Notes):</strong>
+            <span style="font-size:13px; color:#f0f0f5;">${frag.baseAr}</span>
+          </div>
+        </div>
+        <a href="https://wa.me/201018390782?text=${whatsappMsg}" target="_blank" class="btn-primary" style="display:block; text-align:center; padding:12px;">
+          طلب هذا العطر عبر واتساب (01018390782)
+        </a>
+      `;
+
+      document.getElementById('notesModal').classList.add('active');
+    }
+
+    function closeNotesModal(e) {
+      if (!e || e.target.id === 'notesModal' || e.target.classList.contains('btn-modal-close')) {
+        document.getElementById('notesModal').classList.remove('active');
+      }
+    }
+
+    // Initialize display on load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderFragrances(fragrancesData);
+    });
+  </script>
+</body>
+</html>
